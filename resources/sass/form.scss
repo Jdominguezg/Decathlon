@@ -1,0 +1,109 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+	-webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+.textfield{
+	position: relative;
+	min-height: 56px;	
+	box-sizing: border-box;	
+	margin: 5px 0 10px;
+	display: flex;
+	width: 100%;
+	vertical-align: middle;
+	align-items: center;
+	justify-content: center;
+	transition: all .15s ease;
+}
+
+.textfield input,
+.textfield select,
+.textfield textarea{
+	width:100%;
+	height: 100%;
+	font-size: 16px;	
+	padding:12px 16px 14px;
+	border: 1px solid rgba(0,0,0,0.24);	
+	border-radius: 4px;	
+	transition: all .15s ease;
+}
+.textfield textarea{
+	height: 250px;
+	min-width: 100%;
+	padding-top: 17px;
+	padding-left: 15px;
+	resize: none;
+}
+.textfield input:not(:focus):hover,
+.textfield select:not(:focus):hover,
+.textfield textarea:not(:focus):hover{
+	border: 1px solid $primary-color;
+}
+.textfield label{
+	height: 16px;
+	position: absolute;
+	font-size: 16px;
+	top:16px;
+	left: 16px;
+	color: rgba(0,0,0,0.6);
+	padding: 0;
+	transition: all 0.15s ease;
+	background-color: transparent;
+	cursor: text;
+	z-index: 1;
+	text-transform: capitalize;
+}
+.textfield input:focus,
+.textfield textarea:focus{
+	border: 2px solid $primary-color;
+}
+
+.textfield label.notEmpty,
+.textfield input:focus ~ label,
+.textfield textarea:focus ~ label{
+	top: -7px;
+	font-size: 12px;
+	padding: 0 4px;
+	background-color: #fff;
+}
+
+.textfield input:focus + label,
+.textfield textarea:focus + label{
+	color: $primary-color;
+}	
+.text_characters{	
+	font-size: 12px;
+	margin-bottom: -5px;
+	transition: all .15s ease;
+}
+.textfield .toast{
+	background: rgba(0,0,0,0.9);
+	width: 200px;
+	min-height: 50px;
+	position: absolute;
+	bottom:0;
+	left: 0;
+	border-radius: 4px;
+	box-shadow: $dp3;
+	transition: all .3s ease;
+	opacity: 0;
+	visibility: hidden;
+	color: #fff;
+	padding: 16px;
+	font-weight: 300;
+	text-align: left;
+	z-index: 3;
+	font-size: 14px;
+}
+.textfield input:focus ~ .toast{
+	bottom: 65px;
+	opacity: 1;
+	visibility: visible;
+}
+
+.error-message{
+	font-size: 12px;
+	color: $error-color;
+	margin: -5px 0 10px;
+}

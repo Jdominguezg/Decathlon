@@ -1,0 +1,33 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// Variables
+@import 'variables';
+@import 'shadows';
+@import 'animations';
+//Normalize.css
+@import '~normalize.css/normalize.css';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Master
+html, 
+body {
+    height: 100%;
+}
+
+*{
+	outline: none !important;
+	font-family: 'Roboto', sans-serif;
+}
+
+@import 'images';
+@import 'form';
+@import 'buttons';
+@import 'alerts';
+
+@import 'header';
+@import 'login-register';
+@import 'profile';
+
